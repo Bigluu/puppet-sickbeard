@@ -7,4 +7,5 @@ summary       'Module to install sickbeard'
 description   'Installs and configures sickbeard'
 project_page  'https://github.com/DexterTheDragon/puppet-sickbeard'
 
-dependency 'puppetlabs/stdlib'
+dependency 'puppetlabs/stdlib', '>= 0'
+dependency 'puppetlabs/vcsrepo', '>= 0'

@@ -8,10 +8,12 @@ class sickbeard::params {
     'Debian': {
       $package_name = 'sickbeard'
       $service_name = 'sickbeard'
+      $init_file    = 'ubuntu'
     }
     'RedHat', 'Amazon': {
       $package_name = 'sickbeard'
       $service_name = 'sickbeard'
+      $init_file    = 'fedora'
     }
     default: {
       fail("${::operatingsystem} not supported")
