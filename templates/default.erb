@@ -1,36 +1,36 @@
 # MANAGED BY PUPPET
 
-<% if @run_as -%>
+<% if scope['sickbeard::run_as'] -%>
 #$RUN_AS, username to run sickbeard under, the default is sickbeard
-SB_USER=<%= @run_as %>
+SB_USER=<%= scope['sickbeard::run_as'] %>
 
 <% end -%>
-<% if @app_path -%>
+<% if scope['sickbeard::app_path'] -%>
 #$APP_PATH, the location of SickBeard.py, the default is /opt/sickbeard
-SB_HOME=<%= @app_path %>
+SB_HOME=<%= scope['sickbeard::app_path'] %>
 
 <% end -%>
-<% if @data_dir -%>
+<% if scope['sickbeard::data_dir'] -%>
 #$DATA_DIR, the location of sickbeard.db, cache, logs, the default is /opt/sickbeard
-SB_DATA=<%= @data_dir %>
+SB_DATA=<%= scope['sickbeard::data_dir'] %>
 
 <% end -%>
-<% if @pid_file -%>
+<% if scope['sickbeard::pid_file'] -%>
 #$PID_FILE, the location of sickbeard.pid, the default is /var/run/sickbeard/sickbeard.pid
-SB_PIDFILE=<%= @pid_file %>
+SB_PIDFILE=<%= scope['sickbeard::pid_file'] %>
 
 <% end -%>
-<% if @python_bin -%>
+<% if scope['sickbeard::python_bin'] -%>
 #$DAEMON, the location of the python binary, the default is /usr/bin/python
-PYTHON_BIN=<%= @python_bin %>
+PYTHON_BIN=<%= scope['sickbeard::python_bin'] %>
 
 <% end -%>
-<% if @extra_daemon_opts -%>
+<% if scope['sickbeard::extra_daemon_opts'] -%>
 #$EXTRA_DAEMON_OPTS, extra cli option for sickbeard, i.e. " --config=/home/sickbeard/config.ini"
-SB_OPTS=<%= @extra_daemon_opts %>
+SB_OPTS=<%= scope['sickbeard::extra_daemon_opts'] %>
 
 <% end -%>
-<% if @extra_ssd_opts -%>
+<% if scope['sickbeard::extra_ssd_opts'] -%>
 #$EXTRA_SSD_OPTS, extra start-stop-daemon option like " --group=users"
-SSD_OPTS=<%= @extra_ssd_opts %>
+SSD_OPTS=<%= scope['sickbeard::extra_ssd_opts'] %>
 <% end -%>
